@@ -1,0 +1,77 @@
+1.
+  1) 变量一般用英文表示,尽量不用汉字和拼音
+  2) 变量格式一般用驼峰体或下划线隔开单词,一般用小写
+  3) 变量不能用数字开头,不能用特殊符号
+2.
+  name = input('>>>')中name是字符串.
+3.
+  if 条件:
+     命令语句
+  elif 条件:
+     命令语句
+  .....
+  else:
+     命令语句
+4.
+  while 条件:
+     命令语句
+     ....
+     continue  #结束本次循环,到下一个循环
+     break     #直接跳出循环
+  else:        #当while循环没有被中断运行完毕后,才运行,否则不运行.
+     命令语句
+5.
+  count = 0
+  num_sum = 0
+  while count <100:
+      count += 1
+      if count % 2 == 0:
+          count *=(-1)
+      if count == 88:
+          pass
+      num_sum += count
+  print('1-2+3...+99除了88以外所有数的和为%d.'%(num_sum))
+6.
+if_try_again = True
+
+while if_try_again:
+
+    count = 0
+
+    while count < 3:
+
+        count += 1
+        r_name, r_password = 'bruce', '123456'
+        name = input('账号: ')
+        password = input('密码: ')
+
+        if (name == r_name) and (password == r_password):
+            print('Welcom back %s'%(name))
+            if_try_again = False
+            break
+        print('输入错误,你还有%d次机会.'%(3 - count))
+
+    user_choice = input('还要继续尝试吗,输入"y"继续,按任意键退出.')
+    if user_choice != 'y':
+        if_try_again = False
+7.
+  猜数字游戏
+  
+  print('猜一个10以内的整数.')
+  count = 0
+  flag = False
+  while not flag:
+      count += 1
+      user_value = input('猜一个数字: ')
+      if user_value == '7':
+          print('恭喜你猜对了,你一共猜了%s次.'%(count))
+          break
+        
+8.
+  # 单行注释
+  """多行注释""" '''多行注释'''
+9.
+  1) python2模块比较凌乱,python3统一成python特有的风格
+  2) python2不支持中文,python3支持.
+10.
+  continue 结束本次循环,进入下个循环, break 直接跳出循环.
